@@ -300,6 +300,16 @@ public:
 
 };
 
+////
+class GImpactCollisionAlgorithm
+{
+public:
+	GImpactCollisionAlgorithm() {}
+	void registerAlgorithm(btCollisionDispatcher* dispatcher) {
+		btGImpactCollisionAlgorithm::registerAlgorithm(dispatcher);
+	}
+};
+////
 
 //algorithm details
 //#define BULLET_TRIANGLE_COLLISION 1

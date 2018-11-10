@@ -388,6 +388,21 @@ interface btHeightfieldTerrainShape {
 };
 btHeightfieldTerrainShape implements btConcaveShape;
 
+interface btGImpactMeshShape {
+  void btGImpactMeshShape(btStridingMeshInterface meshInterface);
+  void updateBound();
+};
+btGImpactMeshShape implements btConcaveShape;
+
+interface btGImpactCollisionAlgorithm {
+  static void registerAlgorithm(btCollisionDispatcher dispatcher);
+};
+
+interface GImpactCollisionAlgorithm {
+  void GImpactCollisionAlgorithm();
+  void registerAlgorithm(btCollisionDispatcher dispatcher);
+};
+
 interface btDefaultCollisionConstructionInfo {
   void btDefaultCollisionConstructionInfo();
 };
